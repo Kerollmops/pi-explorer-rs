@@ -75,7 +75,16 @@ mod tests {
 
     #[test]
     fn test_some_digits() {
-        assert_eq!(get_digit(0), 3);
+        assert_eq!(get_digit(0), 0x24);
+        assert_eq!(get_digit(1), 0x43);
+        assert_eq!(get_digit(2), 0x3f);
+        assert_eq!(get_digit(3), 0xf6);
+        assert_eq!(get_digit(4), 0x6a);
+    }
+
+    #[test]
+    fn test_a_far_digit() {
+        assert_eq!(get_digit(100_000), 0x35);
     }
 
     #[test]
